@@ -1,8 +1,14 @@
+import Header from './components/Layout/Header';
 import './App.css';
+import {Fragment} from 'react';
 
 function App() {
   return (
-    <Header/>
+    <Fragment >
+      <main className='App-bg'>
+        <Header/>
+      </main>      
+    </Fragment>    
   );
 }
 
