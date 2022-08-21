@@ -1,8 +1,13 @@
+import { Fragment } from "react";
 import SearchBar from "../UI/SearchBar";
+import Genres from "../Book/Genres";
 
 const Sidebar = () => {
     return ( 
-        <SearchBar/>
+        <Fragment>
+            <SearchBar/>
+            <Genres/>
+        </Fragment>        
      );
 }
  
