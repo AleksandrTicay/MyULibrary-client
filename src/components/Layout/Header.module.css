@@ -1,3 +1,19 @@
 .bgWhite {
-    background: #fff;
+    background: #F2F0FD;
+}
+
+.userData {
+    display: flex;
+    align-items: center;
+}
+
+.userData i:first-of-type{
+    border: 1px solid #828282;
+    padding: 1px 4px;    
+    border-radius: 40px;
+    color: #828282;    
+}
+
+.bgBlack {
+    background: black;
 }

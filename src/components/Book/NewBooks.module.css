@@ -1,0 +1,35 @@
+.bookCard {
+    display: flex;    
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+.bookCard__book {    
+    background: #BDBDBD;
+    width: 112px;
+    height: 138px;
+}
+
+.bookCard__data {
+    padding: 0 30px;
+}
+
+.bookCard__btn {
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 23px;
+}
+
+.card-1 {
+    background-color:#FDF6F0 ;
+}
+
+.card-2 {
+    background-color:#FDF6F0 ;
+}
+
+.card-3 {
+    background-color:#FDF6F0 ;
+}

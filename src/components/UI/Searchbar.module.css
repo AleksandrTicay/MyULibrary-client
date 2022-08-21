@@ -1,7 +1,24 @@
-.btn-search {
+.searchForm {
+    position: relative;
+    width: 500px;
+}
+.searchForm i {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 4px;
+    left: 5px;
     background: transparent;
     border: none;
+    color: #828282;
+   
 }
+
+.searchForm input {
+    border: 1px solid #828282;
+    border-radius: 4px;
+    background: transparent;
+    width: 100%;
+    padding: 3px;
+    
+
+}
+

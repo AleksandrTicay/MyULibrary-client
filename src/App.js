@@ -1,7 +1,9 @@
 import Header from "./components/Layout/Header";
 import "./App.css";
 import { ThemeProvider } from "react-bootstrap";
+import "remixicon/fonts/remixicon.css";
 import BooksContainer from "./components/Layout/BooksContainer";
+import NewBooksContainer from "./components/Layout/NewBooksContainer";
 
 function App() {
   return (
@@ -9,10 +11,9 @@ function App() {
       breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
       minBreakpoint="xxs"
     >
-      <main className="App-bg">
-        <Header />
-        <BooksContainer/>
-      </main>
+      <Header />
+      <NewBooksContainer/>
+      <BooksContainer />
     </ThemeProvider>
   );
 }
