@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import {map} from "lodash";
 import classes from './MyModal.module.css';
 
 function MyModal(props) {
@@ -18,21 +19,23 @@ function MyModal(props) {
           <div className={classes.bodyModal__img}>            
           </div>          
           <div className={classes.bodyModal__data}>
-            <p className='fw-bolder h4'>Long Book Title</p>
+            <p className='fw-bolder h4'>{props.title}</p>
             <div className="d-flex">
               <i className="ri-user-line"></i>
-              <p className='mb-0'>Author Name</p>
+              <p className='mb-0'>{props.authors}</p>
             </div>
             <div className="d-flex">
               <i className="ri-calendar-line"></i>
-              <p>1978</p>
+              <p>{props.publishedyear}</p>
             </div>
-            <div className="d-flex">
-              <p className={classes.bodyModal__genre}>Mystery</p>
-              <p className={classes.bodyModal__genre}>Thriller</p>
+            <div className="d-flex">              
+            {map(props.genres,(genre,index) => (
+              <p key={index} className={classes.bodyModal__genre}>{genre.name}</p>
+              ) )}   
+              
             </div>
             <p className='mb-0'>Books available:</p>
-            <p className='fw-bolder h4'>8</p>
+            <p className='fw-bolder h4'>{props.amount}</p>
             <div>
               <Button className={classes['bodyModal__btn-black']}>
                 Add to Cart
