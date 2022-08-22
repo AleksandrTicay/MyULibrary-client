@@ -1,19 +1,18 @@
 import { Fragment } from "react";
 import { useEffect, useState } from "react";
 import {map} from "lodash";
-import { fetchingGenreApi } from "../lib/api";
+import { fetchingGenresApi } from "../lib/api";
 
 const Genres = (props) => {
   const [genres, setGenres] = useState([]);
 
   useEffect(() => {
-    fetchingGenreApi().then((response) => {
+    fetchingGenresApi().then((response) => {
       setGenres(response);
     });
   }, []);
 
-  console.log(genres);
-
+  
   return (
     <Fragment>
       <p className="h4 fw-bolder">Genre</p>

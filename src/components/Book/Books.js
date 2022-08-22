@@ -14,7 +14,9 @@ const Books = (props) => {
    .then(response => {
     setBooks(response);
    })
-  }, []); 
+  }, []);
+ 
+console.log(books);
 
   return (
     <Fragment>
@@ -22,7 +24,7 @@ const Books = (props) => {
         <strong> Browse</strong>
       </p>
       <Row>   
-      {map(books.data,(book,index) => (
+      {map(books.data,(book,index) => (        
           <Book key={index} books={book}/>
         ) )}       
           

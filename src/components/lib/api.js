@@ -16,8 +16,26 @@ export function fetchingApi() {
     });
 }
 
-export function fetchingGenreApi() {
+export function fetchingGenresApi() {
   const url = "http://localhost:8000/api/v1/genres";
+
+  const params = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  return fetch(url, params)
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => {
+      return err;
+    });
+}
+
+export function fetchingGenre(id) {
+  const url = `http://localhost:8000/api/v1/genres/${id}`;
 
   const params = {
     headers: {
