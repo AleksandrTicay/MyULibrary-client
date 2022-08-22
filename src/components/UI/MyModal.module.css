@@ -1,0 +1,43 @@
+.bodyModal {
+    display: flex;
+    padding: 20px 0px;
+    padding-left: 12%;    
+}
+
+.bodyModal__img {
+    background-color: #bdbdbd;
+    width: 218px;
+    height: 270px;
+}
+
+.bodyModal__data {
+    padding: 0 50px;
+}
+
+.bodyModal__genre {
+    border-radius: 5px;
+    background-color: #F2F0FD;
+    padding: 1px 5px ;
+    margin-right: 10px;
+}
+
+.bodyModal__btn-black,
+.bodyModal__btn-black:active,
+.bodyModal__btn-black:focus,
+.bodyModal__btn-black:hover{
+    background-color: black;
+    border: 1px solid black;
+    margin-right: 20px;
+    color: #fff;
+}
+
+
+.bodyModal__btn-white,
+.bodyModal__btn-white:active,
+.bodyModal__btn-white:focus,
+.bodyModal__btn-white:hover {
+    background-color: #fff;
+    border: 1px solid black;
+    padding: 6px 30px;
+    color: black;
+}

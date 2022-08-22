@@ -1,20 +1,15 @@
-import Header from "./components/Layout/Header";
 import "./App.css";
-import { ThemeProvider } from "react-bootstrap";
+import { Route } from 'react-router-dom';
 import "remixicon/fonts/remixicon.css";
-import BooksContainer from "./components/Layout/BooksContainer";
-import NewBooksContainer from "./components/Layout/NewBooksContainer";
+import Student from "./pages/Student";
 
 function App() {
   return (
-    <ThemeProvider
-      breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
-      minBreakpoint="xxs"
-    >
-      <Header />
-      <NewBooksContainer/>
-      <BooksContainer />
-    </ThemeProvider>
+    <div>
+      <Route path="/student">
+        <Student/>
+      </Route>
+    </div>
   );
 }
 

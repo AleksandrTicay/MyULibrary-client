@@ -14,9 +14,13 @@
     padding: 0 30px;
 }
 
-.bookCard__btn {
+.bookCard__btn,
+.bookCard__btn:active,
+.bookCard__btn:focus,
+.bookCard__btn:hover {
     background: transparent;
     border: 1px solid black;
+    color: black;
     border-radius: 5px;
     padding: 5px 10px;
     margin-top: 23px;

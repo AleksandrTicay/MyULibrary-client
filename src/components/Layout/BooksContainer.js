@@ -6,12 +6,12 @@ import Sidebar from "./Sidebar";
 
 const BooksContainer = () => {
     return ( 
-        <Container className="py-5">
+        <Container className="py-2">
             <Row>
-                <Col md={8}>
+                <Col md={9}>
                     <Books/>                    
                 </Col>
-                <Col md={4}>
+                <Col md={3}>
                     <Sidebar/>
                 </Col>
             </Row>

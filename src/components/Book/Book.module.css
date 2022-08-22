@@ -1,0 +1,28 @@
+.book {
+    position: relative;
+    background: #BDBDBD;
+    width: 149px;
+    height: 184px;
+}
+
+.btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #F2F0FD;
+    color: black;
+}
+
+.icon {
+    display: flex;
+    color: #828282;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    background-color: #fff;
+    border: 1px solid #F2F0FD;
+    color: black;
+}

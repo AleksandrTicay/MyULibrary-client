@@ -18,7 +18,7 @@ const Header = () => {
             <div className={classes.userData}>
               <p className="mb-0 pe-4">Hey, <strong>Aleks</strong></p>
               <i className="ri-user-line"></i>
-              <i class="ri-shopping-cart-2-line ps-4 pe-4"></i>              
+              <i className="ri-shopping-cart-2-line ps-4 pe-4"></i>              
               <p className="mb-0">Log out</p>
             </div>
           </Navbar.Collapse>
