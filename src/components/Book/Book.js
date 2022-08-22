@@ -8,9 +8,7 @@ const Book = (props) => {
   const [modalShow, setModalShow] = React.useState(false);
 
   let names = props.books.authors.map((author) => author.name);
-  const authors = names.toString();
-
-    
+  const authors = names.toString();    
 
   return (
     <Col md={2} className="pt-3">

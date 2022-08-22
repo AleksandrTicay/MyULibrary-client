@@ -6,8 +6,6 @@ import Books from "../Book/Books";
 import Sidebar from "./Sidebar";
 
 const BooksContainer = (props) => {
-  
-  
 
   return (
     <Container className="py-2">
@@ -15,7 +13,7 @@ const BooksContainer = (props) => {
         <Col md={9}>
           <Books />
         </Col>
-        <Col md={3}>
+        <Col md={3} className="px-3">
           <Sidebar />
         </Col>
       </Row>

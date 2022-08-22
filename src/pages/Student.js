@@ -1,6 +1,5 @@
 import { ThemeProvider } from "react-bootstrap";
 import BooksContainer from "../components/Layout/BooksContainer";
-import NewBooksContainer from "../components/Layout/NewBooksContainer";
 import Header from "../components/Layout/Header";
 
 
