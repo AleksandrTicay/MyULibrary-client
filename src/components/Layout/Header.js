@@ -4,7 +4,10 @@ import SearchBar from "../UI/SearchBar";
 import HeaderContainer from "./HeaderContainer";
 import Logo from "../UI/Logo";
 
-const Header = () => {
+const Header = (props) => {
+
+  const {setFilter, setSearch} = props;
+
   return (
     <HeaderContainer>
       <Logo/>
@@ -13,7 +16,7 @@ const Header = () => {
         id="basic-navbar-nav"
         className=" d-flex justify-content-around"
       >
-        <SearchBar />
+        <SearchBar setFilter={setFilter} setSearch={setSearch}/>
         <div className={classes.userData}>
           <p className="mb-0 pe-4">
             Hey, <strong>Aleks</strong>

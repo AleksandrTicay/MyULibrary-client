@@ -3,10 +3,10 @@ import { Fragment } from "react";
 import Row from "react-bootstrap/Row";
 import { map } from "lodash";
 import React from "react";
-import Book from "./Book";
+import Book from "../Book/Book";
 import { fetchingApi, fetchingGenre } from "../lib/api";
 
-const Books = (props) => {
+const FilterBooksContainer = (props) => {
   const [books, setBooks] = useState([]);
   const [error, setError] = useState();
   const { genero } = props;
@@ -29,7 +29,7 @@ const Books = (props) => {
   return (
     <Fragment>
       <p className="fw-bolder h4">
-        <strong> Browse</strong>
+        <strong> Filter Results</strong>
       </p>
       <Row>        
         {map(books.data, (book, index) => (                    
@@ -41,4 +41,4 @@ const Books = (props) => {
   );
 };
 
-export default Books;
+export default FilterBooksContainer;

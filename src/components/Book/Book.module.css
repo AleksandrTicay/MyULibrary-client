@@ -1,8 +1,6 @@
 .book {
-    position: relative;
-    background: #BDBDBD;
-    width: 149px;
-    height: 184px;
+    max-width: 100%;
+  
 }
 
 .btn {

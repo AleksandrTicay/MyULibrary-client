@@ -1,21 +1,28 @@
+import { useState,useRef } from "react";
 import classes from "./Searchbar.module.css";
 
-const SearchBar = () => {
+const SearchBar = (props) => {  
+  const nameInputRef = useRef();
+  const filterInputRef = useRef();
 
-  
+  const {setFilter, setSearch} = props;
 
-  function submitFormHandler(event) {
 
+  const submitFormHandler = event => {
+    event.preventDefault();
+    setFilter(filterInputRef.current.value);
+    setSearch(nameInputRef.current.value);       
   }
+
   return (
     <form onSubmit={submitFormHandler} className={classes.searchForm}>
       <div className="d-flex">
-        <select className={classes.searchForm}>
-          <option value="volvo">Author</option>
-          <option value="saab">Genre</option>
+        <select ref={filterInputRef} className={classes.searchForm}>
+          <option value="authors">authors</option>
+          <option value="genres">genres</option>
         </select>
         <div className="position-relative">
-          <input className="ps-4" placeholder="Search by title, author" />
+          <input ref={nameInputRef} className="ps-4" placeholder="Search by title or  author" />
           <i className="ri-search-line"></i>
         </div>
       </div>

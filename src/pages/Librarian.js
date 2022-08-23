@@ -1,20 +1,16 @@
 import { ThemeProvider } from "react-bootstrap";
-import BooksContainer from "../components/Layout/BooksContainer";
-import HeaderContainer from "../components/Layout/HeaderContainer";
-import Logo from "../components/UI/Logo";
+import HeaderLibrarian from "../components/Layout/HeaderLibrarian";
+import LibrarianContainer from "../components/Layout/LibrarianContainer";
 
 
-
-const Student = () => { 
-
+const Student = () => {
   return (
     <ThemeProvider
       breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
       minBreakpoint="xxs"
     >
-      <HeaderContainer >
-        <Logo/>
-      </HeaderContainer>      
+      <HeaderLibrarian/>
+      <LibrarianContainer/>
       
     </ThemeProvider>
   );

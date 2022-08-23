@@ -52,6 +52,24 @@ export function fetchingGenre(id) {
     });
 }
 
+export function fetchingBooks(filter,name) {
+  const url = `http://localhost:8000/api/v1/${filter}?name[lk]=${name}`;
+
+  const params = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  return fetch(url, params)
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => {
+      return err;
+    });
+}
+
 export function updatingAmount(amount, id) {
   const url = `http://localhost:8000/api/v1/books/${id}`;
 
