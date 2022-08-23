@@ -1,0 +1,24 @@
+.title {
+    display: flex;    
+}
+
+.title i {
+    font-size: 20px;
+}
+
+.btn button:first-child {
+    background-color: #10142B;
+    color: #fff;
+    border: 1px solid #10142B;
+    border-radius: 4px;
+    padding: 5px 30px;
+}
+
+.btn button:last-child {
+    background-color: #ffffff;
+    color: #10142B;
+    border: 1px solid #10142B;
+    border-radius: 4px;
+    padding: 5px 40px;
+
+}

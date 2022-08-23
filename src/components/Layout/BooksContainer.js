@@ -1,7 +1,5 @@
 import Container from "react-bootstrap/Container";
-import { useEffect, useState } from "react";
-import {map} from "lodash";
-import { fetchingGenre } from "../lib/api";
+import { useState } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Books from "../Book/Books";

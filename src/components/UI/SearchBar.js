@@ -1,4 +1,4 @@
-import { useState,useRef } from "react";
+import { useRef } from "react";
 import classes from "./Searchbar.module.css";
 
 const SearchBar = (props) => {  
@@ -19,7 +19,7 @@ const SearchBar = (props) => {
       <div className="d-flex">
         <select ref={filterInputRef} className={classes.searchForm}>
           <option value="authors">authors</option>
-          <option value="genres">genres</option>
+          <option value="books">title</option>
         </select>
         <div className="position-relative">
           <input ref={nameInputRef} className="ps-4" placeholder="Search by title or  author" />

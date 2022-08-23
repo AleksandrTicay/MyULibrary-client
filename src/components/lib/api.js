@@ -52,8 +52,9 @@ export function fetchingGenre(id) {
     });
 }
 
-export function fetchingBooks(filter,name) {
-  const url = `http://localhost:8000/api/v1/${filter}?name[lk]=${name}`;
+export function fetchingBooks(filter,search) {
+  const url = `http://localhost:8000/api/v1/${filter}?${filter === 'books'? 'title[lk]=' : 'name[lk]='}${search}`;    
+  console.log(url);
 
   const params = {
     headers: {
@@ -81,6 +82,26 @@ export function updatingAmount(amount, id) {
     body: {
       "amount": amount
     }
+  };
+
+  return fetch(url, params)
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => {
+      return err;
+    });
+}
+
+export function addingBooks(value) {
+  const url = `http://localhost:8000/api/v1/books/`;
+
+  const params = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",      
+    },
+    body: value
   };
 
   return fetch(url, params)

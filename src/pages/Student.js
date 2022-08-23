@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ThemeProvider } from "react-bootstrap";
 import BooksContainer from "../components/Layout/BooksContainer";
+import FilterBooksContainer from "../components/Layout/FilterBooksContainer";
 import Header from "../components/Layout/Header";
 
 
@@ -18,7 +19,7 @@ const Student = () => {
       minBreakpoint="xxs"
     >
       <Header setSearch={setSearch} setFilter={setFilter}/>           
-      {search ? <FilterBook/>: <BooksContainer  />}
+      {search ? <FilterBooksContainer setSearch={setSearch} search={search} filter={filter}/>: <BooksContainer  />}
     </ThemeProvider>
   );
 };

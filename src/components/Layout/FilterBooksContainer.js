@@ -4,39 +4,42 @@ import Row from "react-bootstrap/Row";
 import { map } from "lodash";
 import React from "react";
 import Book from "../Book/Book";
-import { fetchingApi, fetchingGenre } from "../lib/api";
+import { Button } from "react-bootstrap";
+import { fetchingBooks } from "../lib/api";
+import { Container } from "react-bootstrap";
 
 const FilterBooksContainer = (props) => {
   const [books, setBooks] = useState([]);
   const [error, setError] = useState();
-  const { genero } = props;
+  const { search, filter,setSearch } = props;
 
   useEffect(() => {
-    if (genero > 0) {
-      fetchingGenre(genero).then((response) => {
-        setError(response.msg);
-        setBooks(response);
-      });
-    } else {
-      fetchingApi().then((response) => {
-        setBooks(response);
-      });
+    fetchingBooks(filter, search).then((response) => {
+      setError(response.msg);
+      setBooks(response);
+    });
+  }, [filter, search]);
 
-    }
-    
-  }, [genero]);  
+  function onRedirectHandler() {
+    setSearch('');
+  }
 
   return (
     <Fragment>
-      <p className="fw-bolder h4">
-        <strong> Filter Results</strong>
-      </p>
-      <Row>        
-        {map(books.data, (book, index) => (                    
-          <Book key={index} books={book} />
-        ))}
-        {error && <div>{error}</div>}
-      </Row>
+      <Container className="pt-4">
+        <p className="fw-bolder h4">
+          <strong> Filter Results</strong>
+        </p>
+        <Row>
+          {map(books.data, (book, index) => (
+            <Book key={index} books={book} />
+          ))}
+          {error && <div>{error}</div>}
+        </Row>
+        <div className="text-end">
+          <Button onClick={onRedirectHandler}>regresar</Button>
+        </div>
+      </Container>
     </Fragment>
   );
 };

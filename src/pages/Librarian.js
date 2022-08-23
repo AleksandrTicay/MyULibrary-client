@@ -1,7 +1,6 @@
-import { ThemeProvider } from "react-bootstrap";
+import { Container, ThemeProvider } from "react-bootstrap";
 import HeaderLibrarian from "../components/Layout/HeaderLibrarian";
-import LibrarianContainer from "../components/Layout/LibrarianContainer";
-
+import MenuLibrarian from "../components/Layout/MenuLibrarian";
 
 const Student = () => {
   return (
@@ -9,9 +8,10 @@ const Student = () => {
       breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
       minBreakpoint="xxs"
     >
-      <HeaderLibrarian/>
-      <LibrarianContainer/>
-      
+      <HeaderLibrarian />
+      <Container className="py-5">
+        <MenuLibrarian />
+      </Container>
     </ThemeProvider>
   );
 };
