@@ -94,14 +94,16 @@ export function updatingAmount(amount, id) {
 }
 
 export function addingBooks(value) {
-  const url = `http://localhost:8000/api/v1/books/`;
+  const url = "http://localhost:8000/api/v1/books";
 
   const params = {
     method: "POST",
+    body: JSON.stringify(value),
     headers: {
-      "Content-Type": "application/json",      
+      "Content-Type": "application/json",  
+      "Accept": "application/json"
     },
-    body: value
+    
   };
 
   return fetch(url, params)

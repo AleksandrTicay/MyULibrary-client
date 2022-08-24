@@ -1,4 +1,10 @@
-
+.btn,
+.btn:hover,
+.btn:focus {    
+    box-shadow: none;
+    border: none;    
+    background: transparent;
+}
 
 .userData {
     display: flex;

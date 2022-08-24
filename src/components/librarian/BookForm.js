@@ -22,7 +22,8 @@ const Bookform = () => {
             year: yearInputRef.current.value,
             genre: genreInputRef.current.value
         }
-        addingBooks(JSON.stringify(values));
+                
+        addingBooks(values);
     }
 
   return (

@@ -17,11 +17,11 @@ const SearchBar = (props) => {
   return (
     <form onSubmit={submitFormHandler} className={classes.searchForm}>
       <div className="d-flex">
-        <select ref={filterInputRef} className={classes.searchForm}>
+        <select ref={filterInputRef} >
           <option value="authors">authors</option>
           <option value="books">title</option>
         </select>
-        <div className="position-relative">
+        <div className="position-relative w-100">
           <input ref={nameInputRef} className="ps-4" placeholder="Search by title or  author" />
           <i className="ri-search-line"></i>
         </div>

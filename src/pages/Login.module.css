@@ -1,0 +1,35 @@
+.form{    
+    height: 100vh;
+}
+
+.col {
+    padding-top: 20px;
+    position: relative;
+    background-color: #F2F0FD;
+}
+
+.col-r {    
+    padding-top: 50px;
+    position: relative;
+    background-color: #fff;
+}
+
+.logo__pos {
+    width: 50%;    
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+@media (max-width: 700px) {
+    .form {
+        height: 110vh;
+    }
+
+    .logo__pos {
+        text-align: center;
+        width: 90%;        
+    }
+
+}

@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import "remixicon/fonts/remixicon.css";
 import Student from "./pages/Student";
 import Librarian from "./pages/Librarian";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       </Route>
       <Route path="/librarian">
         <Librarian/>
+      </Route>
+      <Route path="/login">
+        <Login/>
       </Route>
     </div>
   );
