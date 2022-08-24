@@ -1,5 +1,5 @@
 export function fetchingApi() {
-  const url = "http://localhost:8000/api/v1/books";
+  const url = "http://library-uiapi.herokuapp.com/api/v1/books";
 
   const params = {
     headers: {
@@ -17,7 +17,7 @@ export function fetchingApi() {
 }
 
 export function fetchingGenresApi() {
-  const url = "http://localhost:8000/api/v1/genres";
+  const url = "http://library-uiapi.herokuapp.com/api/v1/genres";
 
   const params = {
     headers: {
@@ -35,7 +35,7 @@ export function fetchingGenresApi() {
 }
 
 export function fetchingGenre(id) {
-  const url = `http://localhost:8000/api/v1/genres/${id}`;
+  const url = `http://library-uiapi.herokuapp.com/api/v1/genres/${id}`;
 
   const params = {
     headers: {
@@ -53,7 +53,7 @@ export function fetchingGenre(id) {
 }
 
 export function fetchingBooks(filter, search) {
-  const url = `http://localhost:8000/api/v1/${filter}?${
+  const url = `http://library-uiapi.herokuapp.com/api/v1/${filter}?${
     filter === "books" ? "title[lk]=" : "name[lk]="
   }${search}`;
   console.log(url);
@@ -74,7 +74,7 @@ export function fetchingBooks(filter, search) {
 }
 
 export function updatingAmount(amount, id) {
-  const url = `http://localhost:8000/api/v1/books/${id}`;
+  const url = `http://library-uiapi.herokuapp.com/api/v1/books/${id}`;
 
   const params = {
     method: "PATCH",
@@ -96,7 +96,7 @@ export function updatingAmount(amount, id) {
 }
 
 export function addingBooks(value) {
-  const url = "http://localhost:8000/api/v1/books";
+  const url = "http://library-uiapi.herokuapp.com/api/v1/books";
 
   const params = {
     method: "POST",
@@ -117,7 +117,7 @@ export function addingBooks(value) {
 }
 
 export function signAPI(user) {
-  const url = "http://localhost:8000/api/login";
+  const url = "http://library-uiapi.herokuapp.com/api/login";
   const data = {
     ...user,
     email: user.email.toLowerCase(),
