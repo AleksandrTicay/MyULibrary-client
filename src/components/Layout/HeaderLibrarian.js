@@ -2,8 +2,15 @@ import HeaderContainer from "./HeaderContainer";
 import Navbar from "react-bootstrap/Navbar";
 import Logo from "../UI/Logo";
 import classes from "./HeaderLibrarian.module.css";
+import { logout } from "../lib/api";
 
-const HeaderLibrarian = () => {
+const HeaderLibrarian = (props) => {
+  const loggingOut = () => {
+    logout();
+    setRefresh(true);
+  };
+
+  const { setRefresh } = props;
   return (
     <HeaderContainer>
       <Logo />
@@ -18,7 +25,9 @@ const HeaderLibrarian = () => {
               Hey, <strong>Aleks</strong>
             </p>
             <i className="ri-user-line mx-3"></i>
-            <p className="mb-0">Log out</p>
+            <button onClick={loggingOut} className="mb-0 btn">
+              Log out
+            </button>
           </div>
         </div>
       </Navbar.Collapse>

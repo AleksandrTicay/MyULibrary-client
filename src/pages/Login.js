@@ -5,7 +5,9 @@ import Logo from "../components/UI/Logo";
 import classes from "./Login.module.css";
 import LoginForm from "../components/Layout/LoginForm";
 
-const Login = () => {
+const Login = (props) => {
+  const {setRefresh } = props;
+  
   return (
     <Container fluid>
       <Row className={classes.form}>
@@ -17,7 +19,7 @@ const Login = () => {
         </Col>
         <Col md={6} className={classes['col-r']}>
           <div className={classes["logo__pos"]}>
-            <LoginForm />
+            <LoginForm setRefresh={setRefresh}/>
           </div>
         </Col>
       </Row>

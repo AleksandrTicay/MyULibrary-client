@@ -6,7 +6,7 @@ import classes from "./MyModal.module.css";
 
 function MyModal(props) {
   const [addBook, setAddBook] = useState([]);
-  const [formData, setFormData] = useState(initialValues);
+  const [formData, setFormData] = useState(initialValues());
 
   useEffect(() =>{
     setFormData({title: props.title, amount: props.amount, publishedYear: props.publishedyear});   

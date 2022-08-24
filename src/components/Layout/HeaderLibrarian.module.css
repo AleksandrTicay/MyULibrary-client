@@ -5,3 +5,10 @@
     border-radius: 40px;
     color: #828282;    
 }
+.btn,
+.btn:hover,
+.btn:focus {    
+    box-shadow: none;
+    border: none;    
+    background: transparent;
+}

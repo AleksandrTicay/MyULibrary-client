@@ -1,5 +1,4 @@
 import Navbar from "react-bootstrap/Navbar";
-import Nav from 'react-bootstrap/Nav';
 import React from "react";
 import classes from "./Header.module.css";
 import Button from 'react-bootstrap/Button';
@@ -7,11 +6,16 @@ import SearchBar from "../UI/SearchBar";
 import HeaderContainer from "./HeaderContainer";
 import BooksModal from "../UI/BooksModal";
 import Logo from "../UI/Logo";
+import { logout } from "../lib/api";
 
 const Header = (props) => {
   const [modalShow, setModalShow] = React.useState(false);
+  const { setRefresh, setFilter, setSearch } = props;
 
-  const { setFilter, setSearch } = props;
+  const loggingOut = () => {
+    logout();
+    setRefresh(true);
+  }
 
   return (
     <HeaderContainer>
@@ -36,7 +40,7 @@ const Header = (props) => {
             onHide={() => setModalShow(false)}
           />
 
-          <p className="mb-0">Log out</p>
+          <button onClick={loggingOut} className="mb-0 btn">Log out</button>
         </div>
       </Navbar.Collapse>
     </HeaderContainer>

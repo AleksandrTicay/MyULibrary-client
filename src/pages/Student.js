@@ -5,20 +5,18 @@ import FilterBooksContainer from "../components/Layout/FilterBooksContainer";
 import Header from "../components/Layout/Header";
 
 
-const Student = () => { 
+const Student = (props) => { 
 
   const [search, setSearch] = useState();
   const [filter, setFilter ] = useState();
-
-  console.log(search);
-  console.log(filter);
+  const {setRefresh} = props;
 
   return (
     <ThemeProvider
       breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
       minBreakpoint="xxs"
     >
-      <Header setSearch={setSearch} setFilter={setFilter}/>           
+      <Header setRefresh={setRefresh} setSearch={setSearch} setFilter={setFilter}/>           
       {search ? <FilterBooksContainer setSearch={setSearch} search={search} filter={filter}/>: <BooksContainer  />}
     </ThemeProvider>
   );
